@@ -1,20 +1,21 @@
 # Bender against the universe - The game
 
-## Table of Contents
+Javascript game based on the classic "Frogger", famous arcade game from the 80's.
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+## Online Version
+
+- [Bender Against the Universe - The Game](https://samm3r.github.io/bender-game/)
 
 ## Instructions
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+- Use the arrow keys on your keyboard to move our grumpy and lovely robot Bender over the board.
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+- The main objective is to achieve the top of the board without touch on any enemies. Each time you do that, your score is increase in 100 points.
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
+- You have 3 extra lives (represented by beers at the top on screen), what means you can touch the enemy 3 times without lose all your points.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+- If you touch an enemy more than 3 times you will lose the game and all of your earned points.
 
-## Contributing
+- If you lose the game, press 'Enter' on your keyboard to start another session.
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+- Try to break your records and have fun!
