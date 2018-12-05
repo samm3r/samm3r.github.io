@@ -154,6 +154,9 @@ var Engine = (function(global) {
         });
 
         player.render();
+
+        //Call the function to show score, lives and messages on the screen.
+        screenMessages(player);
     }
 
     /* This function does nothing but it could have been a good place to
