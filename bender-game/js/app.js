@@ -22,7 +22,7 @@ class Enemy extends Character {
 
     // Update the enemy's position, required method for game
     // Parameter: dt, a time delta between ticks
-    update(dt){
+    update(player, dt){
 
         this.enemyPosition(player, this, dt);
         
@@ -63,7 +63,6 @@ class Enemy extends Character {
         const enemyY = enemy.y + 77;
         const enemyYend = enemy.y + 145;
 
-
         if (  
             ( enemyY < playerY && enemyYend > playerY ) &&
             ( ( enemyXend > playerX  && enemyX < playerX ) || ( enemyX < playerXend && enemyXend > playerXend ) ) 
@@ -71,23 +70,6 @@ class Enemy extends Character {
             return true;
         }
     }
-
-    // //Return True if the player collides with an enemy
-    // checkCollision(player, enemy){
-    //     const playerX = player.x;
-    //     const playerY = player.y + 107; // Get the y center of the player
-    //     const blockW = 100;
-
-    //     if (  
-    //         ((enemy.y + 77 < playerY) && (enemy.y + 145 > playerY)) &&
-    //         (
-    //             ((enemy.x + blockW/2 + 30 > playerX + 27) && (enemy.x + blockW/2 - 30 < playerX + 27)) ||
-    //             ((enemy.x + blockW/2 - 30 < playerX + 74) && (enemy.x + blockW/2 + 30 > playerX + 74))
-    //         ) 
-    //         ) {
-    //         return true;
-    //     }
-    // }
 
     // Reset Enemy position
     resetEnemy(){
