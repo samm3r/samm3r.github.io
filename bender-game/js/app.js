@@ -94,19 +94,24 @@ class Player extends Character {
     handleInput(mov){
         if (this.lose === false){
 
-            if (mov === 'right' && this.x <= 300) {
-                this.x += 100;
-                this.sprite = this.spriteR;
-            }
-            else if(mov === 'left' && this.x >= 100){
-                this.x -= 100;
-                this.sprite = this.spriteL;
-            }
-            else if (mov === 'down' && this.y <= 317){
-                this.y += 83;
-            }
-            else if (mov === 'up' && this.y >= 68){
-                this.y -= 83;
+            switch (mov) {
+                case 'right':
+                    this.x = (this.x <= 300) ? this.x + 100 : this.x;
+                    this.sprite = this.spriteR;
+                    break;
+
+                case 'left':
+                    this.x = (this.x >= 100) ? this.x - 100 : this.x;
+                    this.sprite = this.spriteL;
+                    break;
+
+                case 'down':
+                    this.y = (this.y <= 317) ? this.y + 83 : this.y;
+                    break;
+
+                case 'up':
+                    this.y = (this.y >= 68) ? this.y - 83 : this.y;
+                    break;
             }
         }
 
@@ -118,7 +123,6 @@ class Player extends Character {
         if (this.y <= 0 && this.win === false) {
             this.winGame();
         }
-
     }
 
     // Update the player's position, required method for game
